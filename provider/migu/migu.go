@@ -6,17 +6,17 @@ import (
 	"crypto/rsa"
 	"encoding/base64"
 	"encoding/hex"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider/base"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider/base"
 	"log"
 	"math"
 	"net/http"
 	"net/url"
 	"strings"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	"github.com/cnsilvan/UnblockNeteaseMusic/processor/crypto"
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/processor/crypto"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
 )
 
 type Migu struct{}
@@ -121,8 +121,8 @@ func (m *Migu) GetSongUrl(searchSong common.SearchMusic, song *common.Song) *com
 				header["origin"] = append(header["origin"], "http://music.migu.cn/")
 				header["referer"] = append(header["referer"], "http://music.migu.cn/")
 				clientRequest := network.ClientRequest{
-					Method:               http.MethodGet,
-					RemoteUrl:            "http://music.migu.cn/v3/api/music/audioPlayer/getPlayInfo?dataType=2&" + encrypt(en),
+					Method:    http.MethodGet,
+					RemoteUrl: "http://music.migu.cn/v3/api/music/audioPlayer/getPlayInfo?dataType=2&" + encrypt(en),
 					//Host:                 "music.migu.cn",
 					Header:               header,
 					Proxy:                true,

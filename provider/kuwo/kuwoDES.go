@@ -3,7 +3,7 @@ package kuwo
 import (
 	"math/big"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/pool"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/pool"
 )
 
 //
@@ -186,7 +186,7 @@ func des64(subkeys []*big.Int, data *big.Int) *big.Int {
 	return new(big.Int).Set(out)
 }
 func Encrypt(src []byte) []byte {
-	by:=encrypt(src, SECRET_KEY)
+	by := encrypt(src, SECRET_KEY)
 	return by
 }
 

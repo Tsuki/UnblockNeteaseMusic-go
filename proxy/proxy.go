@@ -13,11 +13,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/config"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	"github.com/cnsilvan/UnblockNeteaseMusic/processor"
-	"github.com/cnsilvan/UnblockNeteaseMusic/version"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/config"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/processor"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/version"
 )
 
 type HttpHandler struct{}
@@ -206,10 +206,10 @@ func (h *HttpHandler) ServeHTTP(resp http.ResponseWriter, request *http.Request)
 			if request.Method == http.MethodConnect {
 				proxyConnect(resp, request)
 			} else {
-				 if proxyDomain, ok := common.HostDomain[hostStr]; ok {
-					 if *config.Mode != 1 {
-						 proxyDomain = hostStr
-					 }
+				if proxyDomain, ok := common.HostDomain[hostStr]; ok {
+					if *config.Mode != 1 {
+						proxyDomain = hostStr
+					}
 					if len(request.URL.Port()) > 0 {
 						proxyDomain = proxyDomain + ":" + request.URL.Port()
 					}

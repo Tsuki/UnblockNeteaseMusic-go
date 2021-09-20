@@ -3,16 +3,16 @@ package kuwo
 import (
 	"encoding/base64"
 	"encoding/json"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider/base"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider/base"
 	"log"
 	"net/http"
 	"net/url"
 	"regexp"
 	"strings"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
 )
 
 type KuWo struct{}
@@ -47,11 +47,11 @@ func (m *KuWo) SearchSong(song common.SearchSong) (songs []*common.Song) {
 				kuWoSong, ok := matched.(common.MapType)
 				if ok {
 					rid, ok := kuWoSong["rid"].(json.Number)
-					rids:=""
+					rids := ""
 					if !ok {
 						rids, ok = kuWoSong["rid"].(string)
-					}else{
-						rids=rid.String()
+					} else {
+						rids = rid.String()
 					}
 					if ok {
 						songResult := &common.Song{}

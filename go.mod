@@ -1,4 +1,4 @@
-module github.com/cnsilvan/UnblockNeteaseMusic
+module github.com/Tsuki/UnblockNeteaseMusic-go
 
 go 1.16
 

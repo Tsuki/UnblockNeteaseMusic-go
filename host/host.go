@@ -3,8 +3,8 @@ package host
 import (
 	"bufio"
 	"fmt"
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/config"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/config"
 	"io"
 	"log"
 	"net"

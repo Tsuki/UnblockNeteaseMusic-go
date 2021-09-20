@@ -4,21 +4,21 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/cache"
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	kugou "github.com/cnsilvan/UnblockNeteaseMusic/provider/kugou"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider/kuwo"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider/migu"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/cache"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	kugou "github.com/Tsuki/UnblockNeteaseMusic-go/provider/kugou"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider/kuwo"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider/migu"
 
-	//"github.com/cnsilvan/UnblockNeteaseMusic/provider/qq"
+	//"github.com/Tsuki/UnblockNeteaseMusic-go/provider/qq"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
 )
 
 type Provider interface {

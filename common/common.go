@@ -88,15 +88,15 @@ func (m MusicQuality) String() string {
 var (
 	ProxyIp     = "127.0.0.1"
 	ProxyDomain = map[string]string{
-		"music.163.com":            "59.111.181.35",
-		"interface.music.163.com":  "59.111.181.35",
-		"interface3.music.163.com": "59.111.181.35",
-		"apm.music.163.com":        "59.111.181.35",
-		"apm3.music.163.com":       "59.111.181.35",
+		"music.163.com":            "59.111.160.195",
+		"interface.music.163.com":  "115.236.118.33",
+		"interface3.music.163.com": "115.236.118.33",
+		"apm.music.163.com":        "115.236.118.33",
+		"apm3.music.163.com":       "115.236.118.33",
 	}
 	HostDomain = map[string]string{
-		"music.163.com":           "59.111.181.35",
-		"interface.music.163.com": "59.111.181.35",
+		"music.163.com":           "59.111.160.195",
+		"interface.music.163.com": "115.236.118.33",
 	}
 	Source []string
 	Rand   = rand.New(

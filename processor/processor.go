@@ -15,13 +15,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/cache"
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/config"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	"github.com/cnsilvan/UnblockNeteaseMusic/processor/crypto"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider"
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/cache"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/config"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/processor/crypto"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
 	"golang.org/x/text/width"
 )
 
@@ -116,7 +116,7 @@ func RequestBefore(request *http.Request) *Netease {
 			data := strings.Split(decryptString, "-36cd479b6b5-")
 			netease.Path = data[0]
 			netease.Params = utils.ParseJson(bytes.NewBufferString(data[1]).Bytes())
-			}
+		}
 		netease.Path = strings.ReplaceAll(netease.Path, "https://music.163.com", "")
 		netease.Path = strings.ReplaceAll(netease.Path, "http://music.163.com", "")
 		netease.Path = utils.ReplaceAll(netease.Path, `\/\d*$`, "")

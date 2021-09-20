@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
-	"github.com/cnsilvan/UnblockNeteaseMusic/version"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/version"
 )
 
 var (
@@ -26,6 +26,7 @@ var (
 	EndPoint         = flag.Bool("e", false, "enable replace song url")
 	ForceBestQuality = flag.Bool("b", false, "force the best music quality")
 	SearchLimit      = flag.Int("sl", 0, "specify the number of songs searched on other platforms(the range is 0 to 3) ,such as : \"1\"")
+	IpsDomain        = flag.String("f", "", "force ipaddress \"domain=ip,domain2=ip\"")
 )
 
 func ValidParams() bool {

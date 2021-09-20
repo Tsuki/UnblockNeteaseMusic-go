@@ -3,15 +3,15 @@ package kuwo
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider/base"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider/base"
 	"log"
 	"net/http"
 	"strconv"
 	"strings"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/common"
-	"github.com/cnsilvan/UnblockNeteaseMusic/network"
-	"github.com/cnsilvan/UnblockNeteaseMusic/utils"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/common"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/network"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/utils"
 )
 
 const (

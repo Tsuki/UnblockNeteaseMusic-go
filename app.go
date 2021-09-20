@@ -7,15 +7,15 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/config"
-	"github.com/cnsilvan/UnblockNeteaseMusic/provider"
-	"github.com/cnsilvan/UnblockNeteaseMusic/version"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/config"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/provider"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/version"
 
 	//_ "github.com/mkevac/debugcharts" // 可选，添加后可以查看几个实时图表数据
 	//_ "net/http/pprof" // 必须，引入 pprof 模块
 
-	"github.com/cnsilvan/UnblockNeteaseMusic/host"
-	"github.com/cnsilvan/UnblockNeteaseMusic/proxy"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/host"
+	"github.com/Tsuki/UnblockNeteaseMusic-go/proxy"
 )
 
 func main() {
@@ -40,6 +40,7 @@ func main() {
 		log.Println("endPoint=", *config.EndPoint)
 		log.Println("forceBestQuality=", *config.ForceBestQuality)
 		log.Println("searchLimit=", *config.SearchLimit)
+		log.Println("domain ips=", *config.IpsDomain)
 		if host.InitHosts() == nil {
 			//go func() {
 			//	//	// terminal: $ go tool pprof -http=:8081 http://localhost:6060/debug/pprof/heap
