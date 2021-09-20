@@ -204,6 +204,15 @@ func resolveIps() error {
 		common.HostDomain[domain] = rAddr.IP.String()
 
 	}
+	if *config.IpsDomain != "" {
+		for _, i := range strings.Split(*config.IpsDomain, ",") {
+			splits := strings.Split(i, "=")
+			if len(splits) != 2 {
+				continue
+			}
+			common.HostDomain[strings.TrimSpace(splits[0])] = strings.TrimSpace(splits[1])
+		}
+	}
 	return nil
 }
 func getHostsPath() (string, error) {
